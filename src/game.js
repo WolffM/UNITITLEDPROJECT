@@ -181,20 +181,20 @@ class Example extends Phaser.Scene {
 
         // return;
 
-        if (d) {
-            this.cameras.main.scrollX -= 0.5;
+        // if (d) {
+        //     this.cameras.main.scrollX -= 0.5;
 
-            if (this.cameras.main.scrollX <= 0) {
-                d = 0;
-            }
-        }
-        else {
-            this.cameras.main.scrollX += 0.5;
+        //     if (this.cameras.main.scrollX <= 0) {
+        //         d = 0;
+        //     }
+        // }
+        // else {
+        //     this.cameras.main.scrollX += 0.5;
 
-            if (this.cameras.main.scrollX >= 800) {
-                d = 1;
-            }
-        }
+        //     if (this.cameras.main.scrollX >= 800) {
+        //         d = 1;
+        //     }
+        // }
     }
 
 
