@@ -137,10 +137,10 @@ class Example extends Phaser.Scene {
     }
 
     preload() {
-        this.load.json('map', 'assets/tests/iso/isometric-grass-and-water.json');
-        this.load.spritesheet('tiles', 'assets/tests/iso/isometric-grass-and-water.png', { frameWidth: 64, frameHeight: 64 });
-        this.load.spritesheet('skeleton', 'assets/tests/iso/skeleton8.png', { frameWidth: 128, frameHeight: 128 });
-        this.load.image('house', 'assets/tests/iso/rem_0002.png');
+        this.load.json('map', 'Assets/isometric-grass-and-water.json');
+        this.load.spritesheet('tiles', 'Assets/isometric-grass-and-water.png', { frameWidth: 64, frameHeight: 64 });
+        this.load.spritesheet('skeleton', 'Assets/skeleton8.png', { frameWidth: 128, frameHeight: 128 });
+        this.load.image('house', 'Assets/rem_0002.png');
     }
 
     create() {
