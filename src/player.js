@@ -5,6 +5,7 @@ const up = offset + 0
 const left = offset + 6
 const down = offset + 4
 const right = offset + 2
+const height = 64 
 
 // GameObject Player
 export class Player extends Phaser.GameObjects.Image {
@@ -13,7 +14,7 @@ export class Player extends Phaser.GameObjects.Image {
 
         this.startX = x;
         this.startY = y;
-        this.depth = y + 64;
+        this.depth = y + height;
 
         this.keyW = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
         this.keyA = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
@@ -24,23 +25,20 @@ export class Player extends Phaser.GameObjects.Image {
     update() {
         if (this.keyW.isDown) {
             this.frame = this.texture.get(up)
-            console.log("W")
             this.y--
         }
         if (this.keyA.isDown) {
             this.frame = this.texture.get(left)
-            console.log("A")
             this.x--
         }
         if (this.keyS.isDown) {
             this.frame = this.texture.get(down)
-            console.log("S")
             this.y++
         }
         if (this.keyD.isDown) {
             this.frame = this.texture.get(right)
-            console.log("D")
             this.x++
         }
+        this.depth = this.y + height
     }
 }
