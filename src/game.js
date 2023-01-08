@@ -1,13 +1,16 @@
 import {Skeleton} from "./skeleton.js"
 
-var skeletons = [];
-
 var tileWidthHalf;
 var tileHeightHalf;
 
 var d = 0;
 
 var scene;
+
+let keyW
+let keyA
+let keyS
+let keyD
 
 class Example extends Phaser.Scene {
     constructor() {
@@ -29,32 +32,11 @@ class Example extends Phaser.Scene {
 
         this.cameras.main.setSize(1600, 600);
 
-        // this.cameras.main.scrollX = 800;
+        keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
+        keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
+        keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
+        keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
     }
-
-    update() {
-        skeletons.forEach(function (skeleton) {
-            skeleton.update();
-        });
-
-        // return;
-
-        // if (d) {
-        //     this.cameras.main.scrollX -= 0.5;
-
-        //     if (this.cameras.main.scrollX <= 0) {
-        //         d = 0;
-        //     }
-        // }
-        // else {
-        //     this.cameras.main.scrollX += 0.5;
-
-        //     if (this.cameras.main.scrollX >= 800) {
-        //         d = 1;
-        //     }
-        // }
-    }
-
 
     buildMap() {
         //  Parse the data out of the map
@@ -98,6 +80,21 @@ class Example extends Phaser.Scene {
 
         const house_2 = scene.add.image(1300, 290, 'house');
         house_2.depth = house_2.y + 86;
+    }
+
+    update() {
+        if (keyW.isDown) {
+            console.log("W")
+        }
+        if (keyA.isDown) {
+            console.log("A")
+        }
+        if (keyS.isDown) {
+            console.log("S")
+        }
+        if (keyD.isDown) {
+            console.log("D")
+        }
     }
 }
 
