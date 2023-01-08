@@ -1,0 +1,39 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "Assets/Doors/LockedDoor_strip16.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 8,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "LockedDoor_strip16"
+            },
+            {
+                "url": "Assets/Walls/WallSideGrate_strip16.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 32,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "WallSideGrate_strip16"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}
