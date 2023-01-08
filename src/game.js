@@ -27,6 +27,7 @@ class Example extends Phaser.Scene {
         this.player = this.add.existing(new Player(this, 240, 290));
 
         this.cameras.main.setSize(1600, 600);
+        this.cameras.main.startFollow(this.player)
     }
 
     buildMap() {
