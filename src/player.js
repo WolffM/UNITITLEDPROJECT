@@ -1,5 +1,4 @@
 import {directions,anims} from "./config.js"
-var offset = 16
 
 // GameObject Player
 export class Player extends Phaser.GameObjects.Image {
@@ -9,9 +8,29 @@ export class Player extends Phaser.GameObjects.Image {
         this.startX = x;
         this.startY = y;
         this.depth = y + 64;
+
+        this.keyW = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
+        this.keyA = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
+        this.keyS = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
+        this.keyD = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
     }
 
     update() {
-
+        if (this.keyW.isDown) {
+            console.log("W")
+            this.y--
+        }
+        if (this.keyA.isDown) {
+            console.log("A")
+            this.x--
+        }
+        if (this.keyS.isDown) {
+            console.log("S")
+            this.y++
+        }
+        if (this.keyD.isDown) {
+            console.log("D")
+            this.x++
+        }
     }
 }

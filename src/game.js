@@ -4,14 +4,7 @@ import {Player} from "./player.js"
 var tileWidthHalf;
 var tileHeightHalf;
 
-var d = 0;
-
 var scene;
-
-let keyW
-let keyA
-let keyS
-let keyD
 
 class Example extends Phaser.Scene {
     constructor() {
@@ -30,16 +23,10 @@ class Example extends Phaser.Scene {
         scene = this;
 
         this.buildMap();
-        this.addPlayer();
 
-        this.add.existing(new Player(this, 240, 290));
+        this.player = this.add.existing(new Player(this, 240, 290));
 
         this.cameras.main.setSize(1600, 600);
-
-        keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W)
-        keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A)
-        keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S)
-        keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D)
     }
 
     buildMap() {
@@ -78,10 +65,6 @@ class Example extends Phaser.Scene {
         }
     }
 
-    addPlayer(){
-        const player = scene.add.image(240, 370, 'player')
-    }
-
     placeHouses() {
         const house_1 = scene.add.image(240, 370, 'house');
         house_1.depth = house_1.y + 86;
@@ -91,18 +74,7 @@ class Example extends Phaser.Scene {
     }
 
     update() {
-        if (keyW.isDown) {
-            console.log("W")
-        }
-        if (keyA.isDown) {
-            console.log("A")
-        }
-        if (keyS.isDown) {
-            console.log("S")
-        }
-        if (keyD.isDown) {
-            console.log("D")
-        }
+        this.player.update()
     }
 }
 
