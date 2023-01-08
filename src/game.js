@@ -22,7 +22,7 @@ class Example extends Phaser.Scene {
         this.load.json('map', 'Assets/isometric-grass-and-water.json');
         this.load.spritesheet('tiles', 'Assets/isometric-grass-and-water.png', { frameWidth: 64, frameHeight: 64 });
         this.load.spritesheet('skeleton', 'Assets/skeleton8.png', { frameWidth: 128, frameHeight: 128 });
-        this.load.spritesheet('player', 'Assets/player.png', { frameWidth: 128, frameHeight: 128 })
+        this.load.spritesheet('player', 'Assets/player.png', { frameWidth: 16, frameHeight: 22 })
         this.load.image('house', 'Assets/rem_0002.png');
     }
 

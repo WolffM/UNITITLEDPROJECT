@@ -6,6 +6,6 @@
     "phaser": "^3.55.2"
   },
   "scripts": {
-    "start": "http-server -c10 --cors"
+    "start": "http-server -c1 --cors"
   }
 }
