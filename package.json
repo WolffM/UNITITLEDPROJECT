@@ -3,5 +3,8 @@
     "http-server": "^14.1.1",
     "npm": "^9.2.0",
     "phaser": "^3.55.2"
+  },
+  "scripts": {
+    "start": "http-server -c10 --cors"
   }
 }
